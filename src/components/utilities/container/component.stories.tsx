@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@/components/action/button';
+import { BaseButton } from '@/components/action/base-button';
 
 import Container from './component';
 
@@ -46,7 +46,7 @@ export const Playground: Story = {
             </div>
 
             <div>
-               <Button primary={false} label="Login" />
+               <BaseButton label="Login" />
             </div>
          </>
       ),

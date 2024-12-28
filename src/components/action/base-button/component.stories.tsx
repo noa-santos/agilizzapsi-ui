@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import BaseButton from './component';
 import { AlertCircle } from 'react-feather';
-import React from 'react';
 
 const meta = {
    title: 'Components/Action/Button',
