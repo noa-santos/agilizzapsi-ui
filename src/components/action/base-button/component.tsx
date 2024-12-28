@@ -33,7 +33,7 @@ const BaseButton = ({
    ...props
 }: BaseButtonProps) => {
    const variantClasses = {
-      contained: 'bg-primary-main text-primary-contrast border-primary-main',
+      contained: 'bg-primary-main text-primary-contrast border-2 border-primary-main',
       outlined: 'bg-transparent text-primary-main border-2 border-primary-main',
       text: 'bg-transparent text-primary-main border-transparent hover:bg-primary-light',
    };
