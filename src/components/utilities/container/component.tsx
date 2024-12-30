@@ -9,7 +9,6 @@ interface ContainerProps {
 }
 
 const Container: React.FC<ContainerProps> = ({ children, className, bgColor = 'default', bgCustomColor }) => {
-   // Mapear cores de fundo para classes Tailwind
    const bgColorMap: { [key: string]: string } = {
       default: 'bg-background-default',
       paper: 'bg-background-paper',
@@ -18,14 +17,7 @@ const Container: React.FC<ContainerProps> = ({ children, className, bgColor = 'd
 
    return (
       <div className={twMerge('w-full', bgColorMap[bgColor], bgCustomColor)}>
-         <div
-            className={twMerge(
-               'w-full bg-transparent mx-auto px-4 py-8 md:max-w-[960px] md:px-16 md:py-8 lg:max-w-[1152px]',
-               className,
-            )}
-         >
-            {children}
-         </div>
+         <div className={twMerge('w-full bg-transparent mx-auto px-4 max-w-[1080px]', className)}>{children}</div>
       </div>
    );
 };

@@ -64,11 +64,11 @@
    }
 
    .h5 {
-      @apply text-[20px] leading-[24px] tracking-[-0.01em] font-bold;
+      @apply text-[18px] leading-[22px] tracking-[-0.01em] font-bold;
    }
    @media screen(xl) {
       .h5 {
-         @apply text-[24px] leading-[28px] tracking-[-0.01em] font-bold;
+         @apply text-[20px] leading-[24px] tracking-[-0.01em] font-bold;
       }
    }
 
@@ -86,7 +86,7 @@
    }
    @media screen(md) {
       .body1 {
-         @apply text-[20px] leading-[28px] tracking-[0.01em] font-medium;
+         @apply text-[18px] leading-[26px] tracking-[0.01em] font-medium;
       }
    }
 
