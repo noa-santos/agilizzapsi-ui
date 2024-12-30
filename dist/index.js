@@ -28,8 +28,8 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.ts
-var src_exports = {};
-__export(src_exports, {
+var index_exports = {};
+__export(index_exports, {
   Accordion: () => Accordion,
   BaseButton: () => component_default2,
   CommentBlock: () => component_default3,
@@ -40,7 +40,7 @@ __export(src_exports, {
   TextBlock: () => TextBlock,
   Typography: () => component_default
 });
-module.exports = __toCommonJS(src_exports);
+module.exports = __toCommonJS(index_exports);
 
 // src/components/action/base-button/component.tsx
 var import_tailwind_merge2 = require("tailwind-merge");
@@ -126,7 +126,7 @@ var BaseButton = ({
   ...props
 }) => {
   const variantClasses = {
-    contained: "bg-primary-main text-primary-contrast border-primary-main",
+    contained: "bg-primary-main text-primary-contrast border-2 border-primary-main",
     outlined: "bg-transparent text-primary-main border-2 border-primary-main",
     text: "bg-transparent text-primary-main border-transparent hover:bg-primary-light"
   };
@@ -136,8 +136,7 @@ var BaseButton = ({
     semi: "rounded-2xl"
   };
   const classes = (0, import_tailwind_merge2.twMerge)(
-    "flex flex-row align-center justify-center w-fit gap-x-2 px-5 py-3 hover:opacity-75 transition-opacity duration-200 ease-in-out",
-    // Base class
+    "flex flex-row align-center justify-center w-fit gap-x-2 px-5 py-2 hover:opacity-75 transition-opacity duration-200 ease-in-out",
     variantClasses[variant],
     roundedClasses[rounded]
   );
@@ -268,16 +267,7 @@ var Container = ({ children, className, bgColor = "default", bgCustomColor }) =>
     paper: "bg-background-paper",
     brand: "bg-background-brand"
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: (0, import_tailwind_merge4.twMerge)("w-full", bgColorMap[bgColor], bgCustomColor), children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
-    "div",
-    {
-      className: (0, import_tailwind_merge4.twMerge)(
-        "w-full bg-transparent mx-auto px-4 py-8 md:max-w-[960px] md:px-16 md:py-8 lg:max-w-[1152px]",
-        className
-      ),
-      children
-    }
-  ) });
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: (0, import_tailwind_merge4.twMerge)("w-full", bgColorMap[bgColor], bgCustomColor), children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: (0, import_tailwind_merge4.twMerge)("w-full bg-transparent mx-auto px-4 max-w-[1080px]", className), children }) });
 };
 var component_default4 = Container;
 

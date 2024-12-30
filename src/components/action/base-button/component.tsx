@@ -45,7 +45,7 @@ const BaseButton = ({
    };
 
    const classes = twMerge(
-      'flex flex-row align-center justify-center w-fit gap-x-2 px-5 py-2 hover:opacity-75 transition-opacity duration-200 ease-in-out', // Base class
+      'flex flex-row align-center justify-center w-fit gap-x-2 px-5 py-2 hover:opacity-75 transition-opacity duration-200 ease-in-out',
       variantClasses[variant],
       roundedClasses[rounded],
    );
