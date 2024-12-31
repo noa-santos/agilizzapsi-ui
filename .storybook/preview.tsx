@@ -13,7 +13,7 @@ const InterFont = Inter({
 const preview: Preview = {
    decorators: [
       (Story) => (
-         <div className={`antialiased font-sans ${InterFont.variable}`}>
+         <div className={`font-sans antialiased ${InterFont.variable}`}>
             <Story />
          </div>
       ),

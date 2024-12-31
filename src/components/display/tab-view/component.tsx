@@ -9,14 +9,14 @@ const TabView: React.FC<TabViewProps> = ({ tabs, initialTab, className }) => {
    const activeTabContent = tabs.find((tab) => tab.id === activeTab)?.content;
 
    return (
-      <div className={twMerge('flex flex-col gap-16 items-center', className)}>
-         <div className="flex gap-2 w-fit bg-background-default p-2 rounded-3xl">
+      <div className={twMerge('flex flex-col items-center gap-16', className)}>
+         <div className="flex w-fit gap-2 rounded-3xl bg-background-default p-2">
             {tabs.map(({ id, label }) => (
                <TabButton key={id} id={id} label={label} isActive={activeTab === id} onClick={setActiveTab} />
             ))}
          </div>
 
-         <div className="flex w-[700px] h-[400px] rounded-2xl justify-center p-4 bg-background-default">
+         <div className="flex h-[400px] w-[700px] justify-center rounded-2xl bg-background-default p-4">
             {activeTabContent ? (
                <div className="flex flex-col">{activeTabContent}</div>
             ) : (

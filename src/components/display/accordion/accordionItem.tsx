@@ -19,12 +19,12 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ id, title, content, isOpe
    }, [isOpen]);
 
    return (
-      <div className="flex flex-col w-full bg-secondary-light rounded-xl">
+      <div className="flex w-full flex-col rounded-xl bg-secondary-light">
          <div id={`accordion-heading-${id}`} className="flex w-full">
             <button
                type="button"
                className={twMerge(
-                  'flex items-center justify-between w-full p-4 gap-x-2',
+                  'flex w-full items-center justify-between gap-x-2 p-4',
                   'transition-colors duration-300',
                )}
                onClick={() => onToggle(id)}
@@ -36,9 +36,9 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ id, title, content, isOpe
                </Typography>
                <div className="flex-shrink-0">
                   {isOpen ? (
-                     <Minus className="w-5 h-5 transition-transform duration-300" />
+                     <Minus className="h-5 w-5 transition-transform duration-300" />
                   ) : (
-                     <Plus className="w-5 h-5 transition-transform duration-300" />
+                     <Plus className="h-5 w-5 transition-transform duration-300" />
                   )}
                </div>
             </button>

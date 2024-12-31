@@ -13,7 +13,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({ title, text, align =
    };
 
    return (
-      <div className="flex flex-col gap-y-1 w-full max-w-[292px] md:max-w-[438px] xl:max-w-[564px]">
+      <div className="flex w-full max-w-[292px] flex-col gap-y-1 md:max-w-[438px] xl:max-w-[564px]">
          <Typography variant={variantTagMap[variant]} align={align} className="max-w-[272px] md:max-w-full">
             {title}
          </Typography>

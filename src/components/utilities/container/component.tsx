@@ -11,7 +11,7 @@ const Container: React.FC<ContainerProps> = ({ children, className, bgColor = 'd
 
    return (
       <div className={twMerge('w-full', bgColorMap[bgColor], bgCustomColor)}>
-         <div className={twMerge('w-full bg-transparent mx-auto px-4 max-w-[1080px]', className)}>{children}</div>
+         <div className={twMerge('mx-auto w-full max-w-[1080px] bg-transparent px-4', className)}>{children}</div>
       </div>
    );
 };

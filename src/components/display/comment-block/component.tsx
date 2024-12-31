@@ -13,8 +13,8 @@ const CommentBlock: React.FC<CommentBlockProps> = ({ text, color }) => {
    }[color];
 
    return (
-      <div className="flex flex-col w-full md:max-w-[464px] gap-y-1">
-         <PiQuotesFill className={`w-8 h-8 text-4xl transform rotate-180 ${iconColorClass}`} />
+      <div className="flex w-full flex-col gap-y-1 md:max-w-[464px]">
+         <PiQuotesFill className={`h-8 w-8 rotate-180 transform text-4xl ${iconColorClass}`} />
          <Typography variant="body1" color={isContrast ? 'contrast' : 'primary'}>
             {text}
          </Typography>

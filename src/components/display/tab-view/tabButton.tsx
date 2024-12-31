@@ -5,7 +5,7 @@ import { TabButtonProps } from './types';
 const TabButton: React.FC<TabButtonProps> = ({ id, label, isActive, onClick }) => {
    return (
       <button
-         className={`px-3 py-2 rounded-2xl transition-all duration-300 ${
+         className={`rounded-2xl px-3 py-2 transition-all duration-300 ${
             isActive ? 'bg-primary-main' : 'bg-transparent hover:bg-neutral-light'
          }`}
          onClick={() => onClick(id)}

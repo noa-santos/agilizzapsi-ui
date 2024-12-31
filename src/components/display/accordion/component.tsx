@@ -10,7 +10,7 @@ export const Accordion: React.FC<AccordionProps> = ({ items }) => {
    };
 
    return (
-      <div className="flex flex-col w-full gap-y-2 md:max-w-[436px] xl:max-w-[564px]">
+      <div className="flex w-full flex-col gap-y-2 md:max-w-[436px] xl:max-w-[564px]">
          {items.map(({ id, title, content }) => (
             <AccordionItem
                key={id}

@@ -41,7 +41,7 @@ export const Playground: Story = {
       className: 'flex flex-row justify-between py-4 md:py-4',
       children: (
          <>
-            <div className="bg-blue-300 w-[100px] h-[50px] flex items-center justify-center text-white rounded-xl">
+            <div className="flex h-[50px] w-[100px] items-center justify-center rounded-xl bg-blue-300 text-white">
                Logo
             </div>
 
