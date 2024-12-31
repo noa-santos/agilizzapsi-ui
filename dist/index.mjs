@@ -53,16 +53,11 @@ var Typography = ({
   const Component = variantTagMap[variant] || "p";
   const classes = twMerge(
     colorClassMap[color],
-    // Classe de cor
     alignClassMap[align],
-    // Classe de alinhamento
     variant,
-    // Classe da variante
     weight ? weightClassMap[weight] : "",
-    // Classe de peso
     "w-full",
     className
-    // Classes adicionais
   );
   return /* @__PURE__ */ jsx(Component, { className: classes, children });
 };
@@ -214,72 +209,64 @@ var SectionTitle = ({ title, text, align = "center", variant = "hero" }) => {
   ] });
 };
 
-// src/components/utilities/container/component.tsx
-import { twMerge as twMerge4 } from "tailwind-merge";
-import { jsx as jsx7 } from "react/jsx-runtime";
-var Container = ({ children, className, bgColor = "default", bgCustomColor }) => {
-  const bgColorMap = {
-    default: "bg-background-default",
-    paper: "bg-background-paper",
-    brand: "bg-background-brand"
-  };
-  return /* @__PURE__ */ jsx7("div", { className: twMerge4("w-full", bgColorMap[bgColor], bgCustomColor), children: /* @__PURE__ */ jsx7("div", { className: twMerge4("w-full bg-transparent mx-auto px-4 max-w-[1080px]", className), children }) });
-};
-var component_default4 = Container;
-
-// src/components/display/simple-hero-banner/component.tsx
-import { jsx as jsx8 } from "react/jsx-runtime";
-var SimpleHeroBanner = ({ title }) => {
-  return /* @__PURE__ */ jsx8(component_default4, { bgColor: "brand", className: "py-16 md:py-24", children: /* @__PURE__ */ jsx8(component_default, { variant: "h2", align: "center", color: "contrast", children: title }) });
-};
-var component_default5 = SimpleHeroBanner;
-
 // src/components/display/tab-view/component.tsx
 import { useState as useState3 } from "react";
 
 // src/components/display/tab-view/tabButton.tsx
-import { jsx as jsx9 } from "react/jsx-runtime";
+import { jsx as jsx7 } from "react/jsx-runtime";
 var TabButton = ({ id, label, isActive, onClick }) => {
-  return /* @__PURE__ */ jsx9(
+  return /* @__PURE__ */ jsx7(
     "button",
     {
       className: `px-3 py-2 rounded-2xl transition-all duration-300 ${isActive ? "bg-primary-main" : "bg-transparent hover:bg-neutral-light"}`,
       onClick: () => onClick(id),
-      children: /* @__PURE__ */ jsx9(component_default, { variant: "label", color: isActive ? "contrast" : "secondary", weight: "medium", children: label })
+      children: /* @__PURE__ */ jsx7(component_default, { variant: "label", color: isActive ? "contrast" : "secondary", weight: "medium", children: label })
     }
   );
 };
 var tabButton_default = TabButton;
 
 // src/components/display/tab-view/component.tsx
-import { twMerge as twMerge5 } from "tailwind-merge";
-import { jsx as jsx10, jsxs as jsxs5 } from "react/jsx-runtime";
+import { twMerge as twMerge4 } from "tailwind-merge";
+import { jsx as jsx8, jsxs as jsxs5 } from "react/jsx-runtime";
 var TabView = ({ tabs, initialTab, className }) => {
   const [activeTab, setActiveTab] = useState3(initialTab ?? tabs[0]?.id ?? "");
   const activeTabContent = tabs.find((tab) => tab.id === activeTab)?.content;
-  return /* @__PURE__ */ jsxs5("div", { className: twMerge5("flex flex-col gap-16 items-center", className), children: [
-    /* @__PURE__ */ jsx10("div", { className: "flex gap-2 w-fit bg-background-default p-2 rounded-3xl", children: tabs.map(({ id, label }) => /* @__PURE__ */ jsx10(tabButton_default, { id, label, isActive: activeTab === id, onClick: setActiveTab }, id)) }),
-    /* @__PURE__ */ jsx10("div", { className: "flex w-[700px] h-[400px] rounded-2xl justify-center p-4 bg-background-default", children: activeTabContent ? /* @__PURE__ */ jsx10("div", { className: "flex flex-col", children: activeTabContent }) : /* @__PURE__ */ jsx10("div", { className: "flex flex-col", children: "Nenhum conte\xFAdo dispon\xEDvel." }) })
+  return /* @__PURE__ */ jsxs5("div", { className: twMerge4("flex flex-col gap-16 items-center", className), children: [
+    /* @__PURE__ */ jsx8("div", { className: "flex gap-2 w-fit bg-background-default p-2 rounded-3xl", children: tabs.map(({ id, label }) => /* @__PURE__ */ jsx8(tabButton_default, { id, label, isActive: activeTab === id, onClick: setActiveTab }, id)) }),
+    /* @__PURE__ */ jsx8("div", { className: "flex w-[700px] h-[400px] rounded-2xl justify-center p-4 bg-background-default", children: activeTabContent ? /* @__PURE__ */ jsx8("div", { className: "flex flex-col", children: activeTabContent }) : /* @__PURE__ */ jsx8("div", { className: "flex flex-col", children: "Nenhum conte\xFAdo dispon\xEDvel." }) })
   ] });
 };
-var component_default6 = TabView;
+var component_default4 = TabView;
 
 // src/components/display/text-block/component.tsx
-import { jsx as jsx11, jsxs as jsxs6 } from "react/jsx-runtime";
+import { jsx as jsx9, jsxs as jsxs6 } from "react/jsx-runtime";
 var TextBlock = ({ title, text, align = "left" }) => {
   return /* @__PURE__ */ jsxs6("div", { className: "flex flex-col gap-y-1 w-full md:max-w-[438px] xl:max-w-[468px]", children: [
-    /* @__PURE__ */ jsx11(component_default, { variant: "h5", align, children: title }),
-    /* @__PURE__ */ jsx11(component_default, { variant: "body1", color: "secondary", align, children: text })
+    /* @__PURE__ */ jsx9(component_default, { variant: "h5", align, children: title }),
+    /* @__PURE__ */ jsx9(component_default, { variant: "body1", color: "secondary", align, children: text })
   ] });
 };
+
+// src/components/utilities/container/component.tsx
+import { twMerge as twMerge5 } from "tailwind-merge";
+import { jsx as jsx10 } from "react/jsx-runtime";
+var Container = ({ children, className, bgColor = "default", bgCustomColor }) => {
+  const bgColorMap = {
+    default: "bg-background-default",
+    paper: "bg-background-paper",
+    brand: "bg-background-brand"
+  };
+  return /* @__PURE__ */ jsx10("div", { className: twMerge5("w-full", bgColorMap[bgColor], bgCustomColor), children: /* @__PURE__ */ jsx10("div", { className: twMerge5("w-full bg-transparent mx-auto px-4 max-w-[1080px]", className), children }) });
+};
+var component_default5 = Container;
 export {
   Accordion,
   component_default2 as BaseButton,
   component_default3 as CommentBlock,
-  component_default4 as Container,
+  component_default5 as Container,
   SectionTitle,
-  component_default5 as SimpleHeroBanner,
-  component_default6 as TabView,
+  component_default4 as TabView,
   TextBlock,
   component_default as Typography
 };
