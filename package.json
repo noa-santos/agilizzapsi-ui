@@ -1,6 +1,6 @@
 {
    "name": "agilizzapsi-ui",
-   "version": "0.2.6",
+   "version": "0.2.7",
    "description": "Repository for deploying and distributing a reusable UI component library.",
    "main": "./dist/index.js",
    "module": "./dist/index.mjs",
