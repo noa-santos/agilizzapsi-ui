@@ -1,15 +1,6 @@
 import React, { useState } from 'react';
 import AccordionItem from './accordionItem';
-
-type AccordionItemData = {
-   id: string;
-   title: string;
-   content: React.ReactNode;
-};
-
-type AccordionProps = {
-   items: AccordionItemData[];
-};
+import { AccordionProps } from './types';
 
 export const Accordion: React.FC<AccordionProps> = ({ items }) => {
    const [openItemId, setOpenItemId] = useState<string | null>(null);

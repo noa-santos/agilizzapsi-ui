@@ -1,12 +1,6 @@
 import React from 'react';
 import Typography from '@/components/utilities/typography/component';
-
-type TabButtonProps = {
-   id: string;
-   label: string;
-   isActive: boolean;
-   onClick: (id: string) => void;
-};
+import { TabButtonProps } from './types';
 
 const TabButton: React.FC<TabButtonProps> = ({ id, label, isActive, onClick }) => {
    return (

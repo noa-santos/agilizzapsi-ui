@@ -2,14 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import Typography from '@/components/utilities/typography/component';
 import { Plus, Minus } from 'react-feather';
-
-type AccordionItemProps = {
-   id: string;
-   title: string;
-   content: React.ReactNode;
-   isOpen: boolean;
-   onToggle: (id: string) => void;
-};
+import { AccordionItemProps } from './types';
 
 const AccordionItem: React.FC<AccordionItemProps> = ({ id, title, content, isOpen, onToggle }) => {
    const contentRef = useRef<HTMLDivElement>(null);

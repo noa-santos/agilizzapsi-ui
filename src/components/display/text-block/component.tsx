@@ -1,11 +1,6 @@
 import React from 'react';
 import Typography from '@/components/utilities/typography/component';
-
-type TextBlockProps = {
-   title: string;
-   text: string;
-   align?: 'left' | 'center' | 'right'; // Adiciona a propriedade para alinhamento
-};
+import { TextBlockProps } from './types';
 
 export const TextBlock: React.FC<TextBlockProps> = ({ title, text, align = 'left' }) => {
    return (

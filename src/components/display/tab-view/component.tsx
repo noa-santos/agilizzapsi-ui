@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
 import TabButton from './tabButton';
 import { twMerge } from 'tailwind-merge';
-
-type Tab = {
-   id: string;
-   label: string;
-   content: React.ReactNode;
-};
-
-interface TabViewProps {
-   tabs: Tab[];
-   initialTab?: string;
-   className?: string;
-}
+import { TabViewProps } from './types';
 
 const TabView: React.FC<TabViewProps> = ({ tabs, initialTab, className }) => {
    const [activeTab, setActiveTab] = useState<string>(initialTab ?? tabs[0]?.id ?? '');

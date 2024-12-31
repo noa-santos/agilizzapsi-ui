@@ -1,11 +1,7 @@
 import React from 'react';
 import { Typography } from '@/components/utilities/typography';
 import { PiQuotesFill } from 'react-icons/pi';
-
-interface CommentBlockProps {
-   text: string;
-   color: 'contrast' | 'main' | 'light' | 'dark';
-}
+import { CommentBlockProps } from './types';
 
 const CommentBlock: React.FC<CommentBlockProps> = ({ text, color }) => {
    const isContrast = color === 'contrast';

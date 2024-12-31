@@ -1,12 +1,6 @@
 import React from 'react';
 import Typography from '@/components/utilities/typography/component';
-
-type SectionTitleProps = {
-   title: string;
-   text: string;
-   align?: 'left' | 'center' | 'right'; // Adiciona a propriedade para alinhamento
-   variant: 'hero' | 'main' | 'highlight' | 'subHighlight';
-};
+import { SectionTitleProps } from './types';
 
 export const SectionTitle: React.FC<SectionTitleProps> = ({ title, text, align = 'center', variant = 'hero' }) => {
    const variantTagMap: {

@@ -1,26 +1,9 @@
 'use client';
 
-import { ButtonHTMLAttributes } from 'react';
+import { BaseButtonProps } from './types';
 import { twMerge } from 'tailwind-merge';
 import Link from 'next/link';
 import Typography from '@/components/utilities/typography/component';
-
-export interface BaseButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-   /** The variant of the button */
-   variant?: 'contained' | 'outlined' | 'text';
-   /** Button contents */
-   label?: string;
-   /** Icon to display on the left side */
-   startIcon?: React.ReactNode;
-   /** Icon to display on the right side */
-   endIcon?: React.ReactNode;
-   /** The rounded style of the button */
-   rounded?: 'full' | 'slightly' | 'semi';
-   /** The URL to navigate to */
-   href?: string;
-   /** Optional click handler */
-   onClick?: () => void;
-}
 
 /** Primary UI component for user interaction */
 const BaseButton = ({
