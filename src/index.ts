@@ -1,4 +1,5 @@
-import './index.css';
+// Plugin
+export { default as AgilizzaUI } from './utils/plugin';
 
 // Components - Action
 export { BaseButton, type BaseButtonProps } from './components/action/base-button';

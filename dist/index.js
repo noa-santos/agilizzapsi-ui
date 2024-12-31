@@ -31,6 +31,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var index_exports = {};
 __export(index_exports, {
   Accordion: () => Accordion,
+  AgilizzaUI: () => plugin_default,
   BaseButton: () => component_default2,
   CommentBlock: () => component_default3,
   Container: () => component_default5,
@@ -40,6 +41,77 @@ __export(index_exports, {
   Typography: () => component_default
 });
 module.exports = __toCommonJS(index_exports);
+
+// src/utils/plugin/index.ts
+var import_plugin = __toESM(require("tailwindcss/plugin"));
+
+// src/utils/plugin/colors.ts
+var defaultPrimary = {
+  main: "#3B82F6",
+  light: "#BFDBFE",
+  dark: "#1E40AF",
+  contrast: "#fff"
+};
+var defaultSecondary = {
+  main: "#2563EB",
+  light: "#93C5FD",
+  dark: "#1E3A8A",
+  contrast: "#fff"
+};
+var colorPalette = {
+  error: {
+    main: "#FCA5A5",
+    light: "#DC2626",
+    dark: "#991B1B",
+    contrast: "#fff"
+  },
+  warning: {
+    main: "#FDBA74",
+    light: "#EA580C",
+    dark: "#7C2D12",
+    contrast: "#fff"
+  },
+  success: {
+    main: "#16A34A",
+    light: "#86EFAC",
+    dark: "#14532D",
+    contrast: "#fff"
+  },
+  neutral: {
+    main: "#6B7280",
+    light: "#E5E7EB",
+    dark: "#1F2937"
+  },
+  background: {
+    default: "#F2F2F2",
+    paper: "#FFFFFF",
+    brand: "#1E3A8A"
+  },
+  text: {
+    primary: "#000000",
+    secondary: "rgba(0, 0, 0, 0.8)",
+    disabled: "rgba(0, 0, 0, 0.38)",
+    success: "#22C55E",
+    error: "#EF4444",
+    warning: "#F97316",
+    contrast: "#FFFFFF"
+  }
+};
+
+// src/utils/plugin/index.ts
+var AgilizzaUI = (0, import_plugin.default)(() => {
+}, {
+  theme: {
+    extend: {
+      colors: {
+        primary: defaultPrimary,
+        secondary: defaultSecondary,
+        ...colorPalette
+      }
+    }
+  }
+});
+var plugin_default = AgilizzaUI;
 
 // src/components/action/base-button/component.tsx
 var import_tailwind_merge2 = require("tailwind-merge");
@@ -66,6 +138,17 @@ var Typography = ({
     body1: "p",
     body2: "p",
     label: "span"
+  };
+  const variantBaseClassMap = {
+    h1: "text-[36px] leading-[44px] tracking-[-0.02em] font-bold md:text-[40px] md:leading-[48px] xl:text-[56px] xl:leading-[68px]",
+    h2: "text-[32px] leading-[40px] tracking-[-0.02em] font-bold md:text-[36px] md:leading-[44px] xl:text-[40px] xl:leading-[48px]",
+    h3: "text-[28px] leading-[32px] tracking-[-0.02em] font-bold md:text-[32px] md:leading-[40px] xl:text-[36px] xl:leading-[44px]",
+    h4: "text-[24px] leading-[28px] tracking-[-0.01em] font-bold md:text-[28px] md:leading-[32px] xl:text-[32px] xl:leading-[40px]",
+    h5: "text-[18px] leading-[22px] tracking-[-0.01em] font-bold xl:text-[20px] xl:leading-[24px]",
+    h6: "text-[14px] leading-[16px] tracking-[-0.01em] font-medium md:text-[16px] md:leading-[18px]",
+    body1: "text-[16px] leading-[20px] tracking-[0.01em] font-medium md:text-[18px] md:leading-[26px]",
+    body2: "text-[14px] leading-[20px] tracking-[0.01em] font-medium md:text-[16px] md:leading-[20px]",
+    label: "text-[14px] leading-[20px] tracking-[0.02em] font-semibold md:text-[16px] md:leading-[24px]"
   };
   const colorClassMap = {
     primary: "text-text-primary",
@@ -95,6 +178,7 @@ var Typography = ({
   };
   const Component = variantTagMap[variant] || "p";
   const classes = (0, import_tailwind_merge.twMerge)(
+    variantBaseClassMap[variant],
     colorClassMap[color],
     alignClassMap[align],
     variant,
@@ -306,6 +390,7 @@ var component_default5 = Container;
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Accordion,
+  AgilizzaUI,
   BaseButton,
   CommentBlock,
   Container,

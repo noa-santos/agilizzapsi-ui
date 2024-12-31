@@ -1,5 +1,11 @@
+import * as tailwindcss_types_config from 'tailwindcss/types/config';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import React$1, { ButtonHTMLAttributes } from 'react';
+
+declare const AgilizzaUI: {
+    handler: tailwindcss_types_config.PluginCreator;
+    config?: Partial<tailwindcss_types_config.Config>;
+};
 
 interface BaseButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'contained' | 'outlined' | 'text';
@@ -89,4 +95,4 @@ interface ContainerProps {
 
 declare const Container: React$1.FC<ContainerProps>;
 
-export { Accordion, type AccordionItemProps, BaseButton, type BaseButtonProps, CommentBlock, type CommentBlockProps, Container, type ContainerProps, SectionTitle, type SectionTitleProps, TabView, type TabViewProps, TextBlock, type TextBlockProps, Typography, type TypographyProps };
+export { Accordion, type AccordionItemProps, AgilizzaUI, BaseButton, type BaseButtonProps, CommentBlock, type CommentBlockProps, Container, type ContainerProps, SectionTitle, type SectionTitleProps, TabView, type TabViewProps, TextBlock, type TextBlockProps, Typography, type TypographyProps };
